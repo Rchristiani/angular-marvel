@@ -6,15 +6,5 @@
 	<div class="right">
 		<img ng-src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
 	</div>
-	<div ui-view="chars"></div>
-	<div class="left">
-		<p>{{character.description}}</p>
-		<h3>Comics</h3>
-		<ul>
-			<li ng-repeat="comic in character.comics.items">
-				{{comic.name}}
-			</li>
-		</ul>
-	</div>
-	
+	<div ui-view="detail"></div>
 </section>

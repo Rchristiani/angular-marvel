@@ -16,8 +16,13 @@ app.config(function($stateProvider) {
 			url: '/character/:id',
 			controller: 'CharacterCtrl',
 			templateUrl: 'js/templates/characterTemplate.html',
-			veiws: {
-				'char' : {template: 'js/template/charTemplate.html'}
+		})
+		.state('character.detail', {
+			url: '',
+			views: {
+				"detail": {
+					templateUrl: 'js/templates/charTemplate.html'
+				}
 			}
 		})
 		.state('event', {
@@ -51,12 +56,14 @@ app.controller('CreatorCtrl', function($scope,dataFactory,$stateParams) {
 	});
 });
 
-app.controller('CharacterCtrl', function($scope,dataFactory,$stateParams) {
+app.controller('CharacterCtrl', function($scope,dataFactory,$stateParams, $state) {
 	$scope.loading = true;
+
 	dataFactory.getCharacter($stateParams.id).then(function(data) {
 		$scope.loading = false;
 		$scope.character = data.data.results[0];
 		console.log($scope.character);
+		$state.go('character.detail');
 	});
 });
 
