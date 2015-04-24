@@ -1,0 +1,10 @@
+<section class="event-section template clearfix">
+	<p ng-if="loading" class="loading">Loading...</p>
+	<h2>{{event.title}}</h2>
+	<div class="right">
+		<img ng-src="{{event.thumbnail.path}}.{{event.thumbnail.extension}}" alt="">
+	</div>
+	<div class="left">
+		<p>{{event.description}}</p>
+	</div>
+</section>

@@ -1,0 +1,35 @@
+<section class="main-section">
+	<div class="creators col">
+		<h3>Creators</h3>
+		<ul>
+			<li ng-repeat="creator in creators" ng-if="creator.firstName !== ''">
+				<a href="#/creator/{{creator.id}}">{{creator.fullName}}</a>
+			</li>
+			<li class="loadMore">
+				Load More
+			</li>
+		</ul>
+	</div>
+	<div class="characters col">
+		<h3>Characters</h3>
+		<ul>
+			<li ng-repeat="character in characters">
+				<a href="#/character/{{character.id}}">{{character.name}}</a>
+			</li>
+			<li class="loadMore">
+				Load More
+			</li>
+		</ul>
+	</div>
+	<div class="events col">
+		<h3>Events</h3>
+		<ul>
+			<li ng-repeat="event in events">
+				<a href="#/event/{{event.id}}">{{event.title}}</a>
+			</li>
+			<li class="loadMore">
+				Load More
+			</li>
+		</ul>
+	</div>
+</section>
