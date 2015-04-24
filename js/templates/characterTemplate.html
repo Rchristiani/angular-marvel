@@ -1,10 +1,6 @@
 <section class="character-section template clearfix">
 	<p ng-if="loading" class="loading">Loading...</p>
 	
-	<h2>{{character.name}}</h2>
-
-	<div class="right">
-		<img ng-src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
-	</div>
+	<div ui-view="info"></div>
 	<div ui-view="detail"></div>
 </section>

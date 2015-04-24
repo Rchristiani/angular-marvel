@@ -22,6 +22,9 @@ app.config(function($stateProvider) {
 			views: {
 				"detail": {
 					templateUrl: 'js/templates/charTemplate.html'
+				},
+				"info": {
+					templateUrl: 'js/templates/infoTemplate.html'
 				}
 			}
 		})
